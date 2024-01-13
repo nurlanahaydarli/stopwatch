@@ -4,6 +4,7 @@ let reset = document.getElementById("reset")
 let history = document.getElementById("history")
 let result = document.getElementById("result")
 let table = document.getElementById("table")
+let delete_history = document.getElementById("delete_history")
 
 let history_list = []
 let milliseconds = 0;
@@ -47,6 +48,10 @@ history.addEventListener('click',function (){
         `
     }).join('')
     table.innerHTML = history_table
+})
+delete_history.addEventListener('click',function (){
+    history_list = []
+    table.innerHTML = ""
 })
 function convertTime(time){
     let seconds = Math.floor(time / 100)

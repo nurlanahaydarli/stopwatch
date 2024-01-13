@@ -17,7 +17,7 @@
     background-color: #f4f5f8;
     gap: 10px;
 }
-.container {
+.container_body {
     display: flex;
     justify-content: space-between;
     width: 700px;
