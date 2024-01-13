@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+          integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Stopwatch</title>
+</head>
+<body>
+<section class="stopwatch_body">
+    <div class="container">
+        <div class="clock">
+            <svg viewBox="0 0 220 220">
+                <circle
+                        shape-rendering="geometricPrecision"
+                        cx="110"
+                        cy="110"
+                        r="96"
+                />
+                <circle
+                        shape-rendering="geometricPrecision"
+                        class="indicator"
+                        cx="110"
+                        cy="110"
+                        r="96"
+                />
+            </svg>
+            <div class="value-container" id="result">
+                <span class="minutes">00</span>
+                :
+                <span class="seconds">00</span>
+                :
+                <span class="milliseconds">00</span>
+            </div>
+        </div>
+        <div class="buttons-container gap-2">
+            <button class="btn btn-success" id="play"><i class="fas fa-play"></i></button>
+            <button class="btn btn-primary" id="pause"><i class="far fa-stop-circle"></i></button>
+            <button class="btn btn-danger" id="reset"><i class="fas fa-undo"></i></button>
+            <button class="btn btn-warning" id="history"><i class="fas fa-history"></i></button>
+        </div>
+    </div>
+</section>
+<section class="p-5">
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Time</th>
+                <th scope="col">Stop type</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+    </div>
+</section>
+<script src="index.js"></script>
+</body>
+</html>
